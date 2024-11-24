@@ -142,7 +142,7 @@ function ShoppingHome() {
                 (prevSlide - 1 + featureImageList.length) % featureImageList.length
             )
           }
-          className="absolute top-1/2 left-4 transform -translate-y-1/2 bg-white/80 transition-transform hover:scale-110 shadow-lg animate-bounce"
+          className="absolute top-1/2 left-4 transform -translate-y-1/2 bg-white/80 transition-transform hover:scale-110 shadow-lg"
         >
           <ChevronLeftIcon className="w-4 h-4" />
         </Button>
@@ -154,7 +154,7 @@ function ShoppingHome() {
               (prevSlide) => (prevSlide + 1) % featureImageList.length
             )
           }
-          className="absolute top-1/2 right-4 transform -translate-y-1/2 bg-white/80 transition-transform hover:scale-110 shadow-lg animate-bounce"
+          className="absolute top-1/2 right-4 transform -translate-y-1/2 bg-white/80 transition-transform hover:scale-110 shadow-lg"
         >
           <ChevronRightIcon className="w-4 h-4" />
         </Button>
@@ -169,10 +169,10 @@ function ShoppingHome() {
             {categoriesWithIcon.map((categoryItem) => (
               <Card
                 onClick={() => handleNavigateToListingPage(categoryItem, "category")}
-                className="cursor-pointer hover:shadow-xl transition-transform transform hover:scale-105 ease-in-out duration-300 animate-bounce"
+                className="cursor-pointer hover:shadow-xl transition-all transform hover:scale-105 ease-in-out duration-300"
               >
                 <CardContent className="flex flex-col items-center justify-center p-6">
-                  <categoryItem.icon className="w-12 h-12 mb-4 text-primary transition-transform hover:scale-110" />
+                  <categoryItem.icon className="w-12 h-12 mb-4 text-primary transition-all hover:rotate-12" />
                   <span className="font-bold text-gray-700">{categoryItem.label}</span>
                 </CardContent>
               </Card>
@@ -190,10 +190,10 @@ function ShoppingHome() {
             {brandsWithIcon.map((brandItem) => (
               <Card
                 onClick={() => handleNavigateToListingPage(brandItem, "brand")}
-                className="cursor-pointer hover:shadow-xl transition-transform transform hover:scale-105 ease-in-out duration-300 animate-bounce"
+                className="cursor-pointer hover:shadow-xl transition-all transform hover:scale-105 ease-in-out duration-300"
               >
                 <CardContent className="flex flex-col items-center justify-center p-6">
-                  <brandItem.icon className="w-12 h-12 mb-4 text-primary transition-transform hover:scale-110" />
+                  <brandItem.icon className="w-12 h-12 mb-4 text-primary transition-all hover:rotate-12" />
                   <span className="font-bold text-gray-700">{brandItem.label}</span>
                 </CardContent>
               </Card>
